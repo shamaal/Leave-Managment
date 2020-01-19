@@ -1,0 +1,15 @@
+﻿<Data>
+	Data Classes (Create Database)
+<Contracts>
+	Repository Base
+	Repository Interface
+<Repository>
+	Functions Inherit Contract Repository and Repository Base
+<Model>
+	Actual Calss (VM)
+<Controllers>
+	Actions (Call the View and Show it)
+<Views>
+	<Class Name> 
+	 Pages To view (index)
+

@@ -36,6 +36,12 @@ namespace Leave_Managment.Repository
             throw new NotImplementedException();
         }
 
+        public bool isExist(int id)
+        {
+            var exists = _db.LeaveHistories.Any(x => x.Id == id);
+            return exists;
+        }
+
         public bool Save()
         {
             throw new NotImplementedException();

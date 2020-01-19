@@ -10,6 +10,13 @@ namespace Leave_Managment.Repository
 {
     public class EmployeeRepository : IEmployeeRepository
     {
+        private readonly ApplicationDbContext _db;
+
+        //Constructor - Initiali when class is call
+        public EmployeeRepository(ApplicationDbContext db)
+        {
+            _db = db; // Dependancy Injection
+        }
         public bool Create(Employee entity)
         {
             throw new NotImplementedException();
@@ -28,6 +35,12 @@ namespace Leave_Managment.Repository
         public Employee FindById(int id)
         {
             throw new NotImplementedException();
+        }
+
+        public bool isExist(int id)
+        {
+            var exists = _db.Employees.Any(x => x.Id == id.ToString());
+            return exists;
         }
 
         public bool Save()
