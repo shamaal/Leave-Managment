@@ -10,6 +10,7 @@ namespace Leave_Managment.Repository
     public class LeaveTypeRepository : ILeaveTypeRepository
     {
         private readonly ApplicationDbContext _db;
+       
 
         //Constructor - Initiali when class is call
         public LeaveTypeRepository(ApplicationDbContext db)
